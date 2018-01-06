@@ -35,7 +35,7 @@ class EnterTodo extends React.Component{
     }
 } 
 function mapStateToProps(state,ownProps){
-    return{state1:state};
+    return{state1:state.theredu};
 
 }
 
