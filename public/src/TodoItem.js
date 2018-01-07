@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
+import * as actionCreator from './actionCreator/actionCreator.js';
 class TodoItem extends React.Component{
     constructor(props){
         super(props);
@@ -8,7 +8,7 @@ class TodoItem extends React.Component{
     }
     handleRemove(){
         //this.props.deleteEvent({type:"DELETE_EVENT", payload:this.props.itemKey});
-        this.props.dispatch({type:"DELETE_EVENT", payload:this.props.itemKey})
+        this.props.dispatch(actionCreator.deleteEvent(this.props.itemKey));
     }
 
     render(){

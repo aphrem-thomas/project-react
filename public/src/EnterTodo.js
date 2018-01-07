@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import TodoItem from './TodoItem.js'
+import TodoItem from './TodoItem.js';
+import * as actionCreator from './actionCreator/actionCreator.js';
+
 class EnterTodo extends React.Component{
     constructor(props){
         super(props);
@@ -9,15 +11,11 @@ class EnterTodo extends React.Component{
     handleSubmit(){
         //this.props.state1.map(item=>{console.log(item.todoList)})
         var todoValue=$("#EnterTodoId").val();
-        this.props.dispatch({type:"ADD_EVENT",payload:todoValue});
+        this.props.dispatch(actionCreator.addEvent(todoValue));
         $("#EnterTodoId").val('');
         //setTimeout(()=>{this.props.dispatch({type:"DELETE_EVENT", payload:1});},2000)
     }
-    deleteEvent(dispatchthis){
-        console.log(dispatchthis);
-        this.props.dispatch({type:"DELETE_EVENT", payload:1});
-    }
-  
+   
     
     render(){
         return(
@@ -36,6 +34,10 @@ class EnterTodo extends React.Component{
 } 
 function mapStateToProps(state,ownProps){
     return{state1:state.theredu};
+
+}
+
+function mapDispatchToProps(dispatch){
 
 }
 
