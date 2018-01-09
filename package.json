@@ -25,5 +25,8 @@
     "redux": "^3.7.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
+  },
+  "devDependencies": {
+    "redux-immutable-state-invariant": "^2.1.0"
   }
 }

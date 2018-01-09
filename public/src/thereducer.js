@@ -12,7 +12,8 @@ export function thereducer(state=[{todoList:"",id:0}], action){
         break;
         case 'DELETE_EVENT':{
             let newState=state.filter((item)=>{return(item.id!=action.payload);});
-            state=newState;}
+            state=newState;
+        }
             break;
     }
     return state;
