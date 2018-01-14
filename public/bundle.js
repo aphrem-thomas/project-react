@@ -47862,7 +47862,7 @@ var apiCall = function (_React$Component) {
 }(_react2.default.Component);
 
 function mapStateToProps(state, ownProps) {
-    return { courses: state.nextredu };
+    return { courses: state.CourseReducer };
 }
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(apiCall);
 

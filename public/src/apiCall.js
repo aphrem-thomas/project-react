@@ -26,7 +26,7 @@ class apiCall extends React.Component{
     }
 }
 function mapStateToProps(state,ownProps){
-    return({courses:state.nextredu});
+    return({courses:state.CourseReducer});
 }
 export default connect (mapStateToProps)(apiCall); 
         
