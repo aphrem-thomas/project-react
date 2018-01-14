@@ -8,14 +8,16 @@ import {combineReducers, applyMiddleware} from 'redux';
 import {createStore} from 'redux';
 import {thereducer} from './src/thereducer.js';
 import {Bootstrap} from 'bootstrap';
-
-const redus=combineReducers({theredu:thereducer});
+import thunk from 'redux-thunk';
+import {apiReducer} from './src/apireducer.js';
+import{get_courses} from './src/actionCreator/actionCreator.js';
+const redus=combineReducers({TodoReducer:thereducer, CourseReducer:apiReducer});
 
 var store=createStore(
     redus,
-    applyMiddleware(reduxImmutableStateInvariant()) //this middleware will detect mutation and remember to delete when under porduction
+    applyMiddleware(thunk,reduxImmutableStateInvariant()) //this middleware will detect mutation and remember to delete when under porduction
 );
-
+store.dispatch(get_courses());
 ReactDom.render(
     <Provider store={store}>
         <App/>

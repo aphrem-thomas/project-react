@@ -6,6 +6,7 @@ import Photos from './photos.js';
 import Home from './home.js';
 import Me from './Me.js'
 import Todo from './Todo.js';
+import apiCall from'./apiCall.js';
 class ContentPane extends React.Component{
     render(){
         return(
@@ -16,6 +17,7 @@ class ContentPane extends React.Component{
                         <Route exact path='/contact' component={Contact}/>
                         <Route exact path='/photos' component={Photos}/>
                         <Route exact path='/todoapp' component={Todo}/>
+                        <Route exact path='/api-call' component={apiCall}/>
                     </Switch>
             </div>
         );

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actionCreator from './actionCreator/actionCreator.js';
+import PropTypes from 'prop-types';
 class TodoItem extends React.Component{
     constructor(props){
         super(props);
@@ -29,8 +30,13 @@ class TodoItem extends React.Component{
     }
 }
 
+TodoItem.propTypes={
+    state:PropTypes.object,
+    itemKey:PropTypes.number
+};
+
 
 function mapStateToProps(state, ownProps){
-   return {state:state};
+   return {state1:state.theredu};
 }
 export default connect(mapStateToProps)(TodoItem);
