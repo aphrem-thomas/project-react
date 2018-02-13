@@ -17,7 +17,7 @@ var store=createStore(
     redus,
     applyMiddleware(thunk,reduxImmutableStateInvariant()) //this middleware will detect mutation and remember to delete when under porduction
 );
-store.dispatch(get_courses());
+//store.dispatch(get_courses());
 ReactDom.render(
     <Provider store={store}>
         <App/>

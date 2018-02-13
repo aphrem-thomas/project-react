@@ -14,8 +14,9 @@ export function getCourses(courses){
     return({type:'GET_COURSES',payload:courses});
 }
 
-export function get_courses(){
-    return function(dispatch){
+export function get_courses(message){
+    return function(dispatch,getState){
+        console.log(message);
         return CourseApi.getAllCourses().then(courses=>{
             dispatch(getCourses(courses));
             //console.log(courses);
