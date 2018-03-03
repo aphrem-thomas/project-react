@@ -1,0 +1,16 @@
+#navigation {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 5;
+}
+
+#contentpane{
+    margin-top:75px;
+}
+
+#entertodo{
+    margin: 100px 75px;
+    z-index: 4;
+}

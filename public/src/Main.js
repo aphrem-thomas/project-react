@@ -7,8 +7,12 @@ class Main extends React.Component{
     render(){
         return(
             <div>
-                <NavBar/>
-                <ContentPane/>
+                <div id="navigation">
+                    <NavBar/>
+                </div>
+                <div id="contentpane">
+                    <ContentPane/>
+                </div>
             </div>
         );
     }

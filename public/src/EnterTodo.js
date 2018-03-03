@@ -9,24 +9,26 @@ class EnterTodo extends React.Component{
 
     }
     handleSubmit(){
-        //this.props.state1.map(item=>{console.log(item.todoList)})
         var todoValue=$("#EnterTodoId").val();
         this.props.dispatch(actionCreator.addEvent(todoValue));
         $("#EnterTodoId").val('');
-        //setTimeout(()=>{this.props.dispatch({type:"DELETE_EVENT", payload:1});},2000)
     }
    
     
     render(){
         return(
          <div>
-            {this.props.state1.map((jobs)=>{
-                if(jobs.id!=0){
-                return <TodoItem key={jobs.id} items={jobs.todoList} itemKey={jobs.id}/>
-                }
-                })}
             <input type="text" className="form-control" id="EnterTodoId" aria-describedby="emailHelp" placeholder="Enter Todo"/>
             <button className="btn btn-primary" onClick={this.handleSubmit.bind(this)}>Submit</button>
+            {this.props.state1.map((jobs)=>{
+                if(jobs.id!=0){
+                return (
+                    <div id="todoitem">
+                        <TodoItem key={jobs.id} items={jobs.todoList} itemKey={jobs.id}/>
+                    </div>
+                )}
+                })}
+            
         </div>
         );
 

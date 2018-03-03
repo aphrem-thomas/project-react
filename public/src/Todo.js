@@ -4,7 +4,9 @@ export default class Todo extends React.Component{
     render(){
         return(
             <div>
-                <EnterTodo/>
+                <div id="entertodo">
+                    <EnterTodo/>
+                </div>
             </div>
         );
 

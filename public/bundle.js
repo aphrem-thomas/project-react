@@ -34132,8 +34132,16 @@ var Main = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_navbar2.default, null),
-                _react2.default.createElement(_contentpane2.default, null)
+                _react2.default.createElement(
+                    'div',
+                    { id: 'navigation' },
+                    _react2.default.createElement(_navbar2.default, null)
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { id: 'contentpane' },
+                    _react2.default.createElement(_contentpane2.default, null)
+                )
             );
         }
     }]);
@@ -34186,77 +34194,81 @@ var NavBar = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'nav',
-        { className: 'navbar navbar-expand-lg navbar-dark bg-dark' },
-        _react2.default.createElement(
-          'a',
-          { className: 'navbar-brand', href: '#' },
-          'Navbar'
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-          _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
-        ),
+        { className: 'navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top' },
         _react2.default.createElement(
           'div',
-          { className: 'collapse navbar-collapse', id: 'navbarSupportedContent' },
+          { className: 'container' },
           _react2.default.createElement(
-            'ul',
-            { className: 'navbar-nav mr-auto' },
-            _react2.default.createElement(
-              'li',
-              { className: 'nav-item active' },
-              _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/' },
-                'home'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              { className: 'nav-item' },
-              _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/about' },
-                'about'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              { className: 'nav-item' },
-              _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/photos' },
-                'Photos'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              { className: 'nav-item' },
-              _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/todoapp' },
-                'Todo app'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              { className: 'nav-item' },
-              _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/api-call' },
-                'API-call'
-              )
-            )
+            'a',
+            { className: 'navbar-brand', href: '#' },
+            'Navbar'
           ),
           _react2.default.createElement(
-            'form',
-            { className: 'form-inline my-2 my-lg-0' },
-            _react2.default.createElement('input', { className: 'form-control mr-sm-2', type: 'search', placeholder: 'Search', 'aria-label': 'Search' }),
+            'button',
+            { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+            _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'collapse navbar-collapse', id: 'navbarSupportedContent' },
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn-outline-success my-2 my-sm-0', type: 'submit' },
-              'Search'
+              'ul',
+              { className: 'navbar-nav mr-auto' },
+              _react2.default.createElement(
+                'li',
+                { className: 'nav-item active' },
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { className: 'nav-link', to: '/' },
+                  'home'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                { className: 'nav-item' },
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { className: 'nav-link', to: '/about' },
+                  'about'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                { className: 'nav-item' },
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { className: 'nav-link', to: '/photos' },
+                  'Photos'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                { className: 'nav-item' },
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { className: 'nav-link', to: '/todoapp' },
+                  'Todo app'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                { className: 'nav-item' },
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { className: 'nav-link', to: '/api-call' },
+                  'API-call'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'form',
+              { className: 'form-inline my-2 my-lg-0' },
+              _react2.default.createElement('input', { className: 'form-control mr-sm-2', type: 'search', placeholder: 'Search', 'aria-label': 'Search' }),
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn-outline-success my-2 my-sm-0', type: 'submit' },
+                'Search'
+              )
             )
           )
         )
@@ -46246,7 +46258,11 @@ var Todo = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_EnterTodo2.default, null)
+                _react2.default.createElement(
+                    'div',
+                    { id: 'entertodo' },
+                    _react2.default.createElement(_EnterTodo2.default, null)
+                )
             );
         }
     }]);
@@ -46305,31 +46321,31 @@ var EnterTodo = function (_React$Component) {
     _createClass(EnterTodo, [{
         key: 'handleSubmit',
         value: function handleSubmit() {
-            //this.props.state1.map(item=>{console.log(item.todoList)})
             var todoValue = $("#EnterTodoId").val();
             this.props.dispatch(actionCreator.addEvent(todoValue));
             $("#EnterTodoId").val('');
-            //setTimeout(()=>{this.props.dispatch({type:"DELETE_EVENT", payload:1});},2000)
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
-
             return _react2.default.createElement(
                 'div',
                 null,
-                this.props.state1.map(function (jobs) {
-                    if (jobs.id != 0) {
-                        return _react2.default.createElement(_TodoItem2.default, { key: jobs.id, items: jobs.todoList, deleteEvent: _this2.deleteEvent, itemKey: jobs.id });
-                    }
-                }),
                 _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'EnterTodoId', 'aria-describedby': 'emailHelp', placeholder: 'Enter Todo' }),
                 _react2.default.createElement(
                     'button',
                     { className: 'btn btn-primary', onClick: this.handleSubmit.bind(this) },
                     'Submit'
-                )
+                ),
+                this.props.state1.map(function (jobs) {
+                    if (jobs.id != 0) {
+                        return _react2.default.createElement(
+                            'div',
+                            { id: 'todoitem' },
+                            _react2.default.createElement(_TodoItem2.default, { key: jobs.id, items: jobs.todoList, itemKey: jobs.id })
+                        );
+                    }
+                })
             );
         }
     }]);
